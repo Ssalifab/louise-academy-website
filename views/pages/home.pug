@@ -1,0 +1,82 @@
+extends ../layouts/main
+
+block content
+  section.hero-section
+    .container
+      .row.align-items-center.g-5
+        .col-lg-6
+          span.eyebrow Learning for life
+          h1 Quality education. Strong foundations. Brighter futures.
+          p.hero-lead Louise Junior School is a high-quality, low-cost education model school committed to helping children build the skills, confidence and curiosity they need to thrive.
+          .d-flex.flex-wrap.gap-3.mt-4
+            a.btn.btn-brand.btn-lg(href='/admissions') Enquire about admissions
+            a.btn.btn-outline-brand.btn-lg(href='/about') Discover Louise Junior School
+          .hero-note.mt-4
+            span.note-mark ✓
+            span Foundations in reading, mathematics, mentorship and practical learning
+        .col-lg-6
+          .hero-image-wrap
+            img.hero-image(src='/images/hero-classroom.jpg' alt='Louise Junior School learners in a classroom' onerror="this.onerror=null;this.src='/images/classroom-placeholder.svg'")
+            .hero-image-caption
+              strong Education is life
+              span Every learner matters
+  section.py-5
+    .container
+      .section-heading.text-center.mx-auto
+        span.eyebrow What we do
+        h2 Learning that prepares children for life
+        p We combine strong academic foundations with support, mentorship and experiences that help learners grow.
+      .row.g-4.mt-2
+        .col-md-6.col-lg-3
+          .feature-card
+            .feature-icon 01
+            h3 Literacy & numeracy
+            p Building confident readers and capable problem-solvers.
+        .col-md-6.col-lg-3
+          .feature-card
+            .feature-icon 02
+            h3 Academic support
+            p Giving learners the guidance and practice they need to progress.
+        .col-md-6.col-lg-3
+          .feature-card
+            .feature-icon 03
+            h3 Mentorship
+            p Encouraging character, confidence and positive choices.
+        .col-md-6.col-lg-3
+          .feature-card
+            .feature-icon 04
+            h3 Activities & discovery
+            p Connecting classroom learning to practical, real-life experiences.
+  section.section-soft.py-5
+    .container
+      .row.align-items-center.g-5
+        .col-lg-6
+          img.content-image(src='/images/pupils-learning.jpg' alt='Learners working together' onerror="this.onerror=null;this.src='/images/classroom-placeholder.svg'")
+        .col-lg-6
+          span.eyebrow Our approach
+          h2 Learner-centred teaching, shared growth
+          p We believe children learn best when lessons connect to real life, learners support one another and teachers continually improve their practice.
+          ul.check-list
+            li Practical and relevant learning
+            li Peer-to-peer learning
+            li Teacher planning, training and peer review
+            li Parent engagement and support at home
+          a.text-link(href='/academics') Explore our learning approach →
+  section.py-5
+    .container
+      .row.g-5.align-items-center
+        .col-lg-5
+          span.eyebrow Families and community
+          h2 Education grows stronger when we work together
+          p Parents, teachers and community partners all play an important role in helping children attend school, learn well and complete their education.
+          a.btn.btn-brand(href='/impact') Partner with Louise Junior School
+        .col-lg-7
+          .row.g-3
+            .col-6: img.gallery-tile(src='/images/teacher-training.jpg' alt='Teacher development' onerror="this.onerror=null;this.src='/images/classroom-placeholder.svg'")
+            .col-6: img.gallery-tile.mt-4(src='/images/school-activities.jpg' alt='School activities' onerror="this.onerror=null;this.src='/images/classroom-placeholder.svg'")
+  section.cta-section.py-5
+    .container.text-center
+      span.eyebrow.text-white-50 Join our community
+      h2 Learn more about Louise Junior School
+      p Discover our approach, ask about admissions or explore ways to support our work.
+      a.btn.btn-light.btn-lg(href='/contact') Contact the school

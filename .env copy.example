@@ -1,0 +1,10 @@
+PORT=3000
+NODE_ENV=development
+
+# Resend email settings. Never commit your real API key.
+RESEND_API_KEY=re_your_resend_api_key
+# Must be a sender address on a domain you have verified in Resend.
+ENQUIRY_FROM=Louise Academy <website@your-verified-domain.com>
+
+# Add later when we connect the school management system:
+# MONGODB_URI=mongodb://127.0.0.1:27017/louise_academy

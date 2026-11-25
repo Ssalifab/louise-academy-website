@@ -1,0 +1,65 @@
+extends ../layouts/main
+
+block content
+  section.page-hero
+    .container
+      span.eyebrow Contact
+      h1 We would be happy to hear from you
+      p Contact Louise Junior School for admissions, partnerships or general enquiries.
+
+  section.py-5
+    .container
+      .row.g-4
+        .col-lg-6
+          .info-card.h-100
+            h2 Visit or call us
+            p Kagando, Masaka–Bukomansimbi Road, Uganda
+            p.mb-2: strong Telephone
+            p: a(href='tel:+256772577422') +256 772 577 422
+            p: a(href='tel:+256773003639') +256 773 003 639
+            p.mb-2: strong Email
+            p: a(href='mailto:cssekikubo@yahoo.com') cssekikubo@yahoo.com
+            p: a(href='mailto:louiseacademyug@gmail.com') louiseacademyug@gmail.com
+
+        .col-lg-6
+          form#enquiryForm.contact-form(method='POST' action='/contact/enquiry')
+            h2 Send an enquiry
+            p.text-muted.mb-4 Use this form for admissions, school information or partnership enquiries.
+
+            .mb-3
+              label.form-label(for='enquiryName') Your full name *
+              input#enquiryName.form-control(type='text' name='name' required maxlength='100' autocomplete='name' placeholder='Enter your name')
+
+            .mb-3
+              label.form-label(for='enquiryEmail') Email address *
+              input#enquiryEmail.form-control(type='email' name='email' required maxlength='254' autocomplete='email' placeholder='you@example.com')
+
+            .mb-3
+              label.form-label(for='enquiryPhone') Phone number
+              input#enquiryPhone.form-control(type='tel' name='phone' maxlength='30' autocomplete='tel' placeholder='+256...')
+
+            .mb-3
+              label.form-label(for='enquiryType') Enquiry type *
+              select#enquiryType.form-select(name='enquiryType' required)
+                option(value='' selected disabled) Select an enquiry type
+                option(value='Admissions') Admissions
+                option(value='Fees') School fees
+                option(value='Academics') Academics
+                option(value='Partnership or donation') Partnership or donation
+                option(value='General') General enquiry
+
+            .mb-3
+              label.form-label(for='enquiryMessage') Message *
+              textarea#enquiryMessage.form-control(name='message' rows='5' required maxlength='4000' placeholder='How can Louise Junior School help you?')
+
+            //- Honeypot: leave this field empty. It helps block automated spam.
+            .d-none(aria-hidden='true')
+              label(for='website') Leave this field empty
+              input#website(type='text' name='website' tabindex='-1' autocomplete='off')
+
+            button#enquirySubmit.btn.btn-brand.w-100(type='submit')
+              span.button-label Send enquiry
+              span.button-loading.d-none Sending...
+
+            p#formMessage.form-message.mt-3(role='status' aria-live='polite')
+            p.small.text-muted.mt-2 Your enquiry will be sent to the school office. Please do not include sensitive personal or medical information.

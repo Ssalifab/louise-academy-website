@@ -1,0 +1,36 @@
+extends ../layouts/main
+block content
+  section.page-hero
+    .container
+      span.eyebrow Admissions
+      h1 Begin your child's learning journey
+      p Contact Louise Junior School to ask about availability, requirements and the admission process.
+  section.py-5
+    .container
+      .row.g-5
+        .col-lg-5
+          h2 Enquire with the school
+          p Our team can guide you on classes, requirements and the next steps for admission.
+          p: strong Phone: 
+            a(href='tel:+256772577422') +256 772 577 422
+          p: strong Email: 
+            a(href='mailto:cssekikubo@yahoo.com') cssekikubo@yahoo.com
+          p.small.text-muted This starter form is a front-end demonstration. It does not yet save or send enquiries.
+        .col-lg-7
+          form#enquiryForm.contact-form
+            .row.g-3
+              .col-md-6: label.form-label(for='parentName') Parent/guardian name
+                input#parentName.form-control(name='parentName' required)
+              .col-md-6: label.form-label(for='phone') Phone number
+                input#phone.form-control(name='phone' type='tel' required)
+              .col-md-6: label.form-label(for='email') Email (optional)
+                input#email.form-control(name='email' type='email')
+              .col-md-6: label.form-label(for='classApplying') Class applying for
+                select#classApplying.form-select(name='classApplying' required)
+                  option(value='') Select class
+                  each level in ['Nursery','P.1','P.2','P.3','P.4','P.5','P.6','P.7']
+                    option(value=level)= level
+              .col-12: label.form-label(for='message') Message
+                textarea#message.form-control(name='message' rows='4' placeholder='Tell us how we can help')
+              .col-12: button.btn.btn-brand(type='submit') Send enquiry
+              .col-12: p#formMessage.form-message(role='status')

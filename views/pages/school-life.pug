@@ -1,0 +1,15 @@
+extends ../layouts/main
+block content
+  section.page-hero
+    .container
+      span.eyebrow School life
+      h1 Learning happens everywhere
+      p Explore classroom learning, mentorship, extracurricular activities and community engagement.
+  section.py-5
+    .container
+      .row.g-4
+        each item in [{name:'Learning together',file:'pupils-learning.jpg'},{name:'Our classrooms',file:'hero-classroom.jpg'},{name:'Teacher development',file:'teacher-training.jpg'},{name:'Activities',file:'school-activities.jpg'},{name:'School environment',file:'school-building.jpg'},{name:'Community engagement',file:'community-outreach.jpg'}]
+          .col-sm-6.col-lg-4
+            .gallery-card
+              img(src='/images/' + item.file alt=item.name onerror="this.onerror=null;this.src='/images/classroom-placeholder.svg'")
+              h3= item.name
